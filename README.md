@@ -27,12 +27,12 @@ Default command for verification:
 ### Golang
 | Tool | Description | Benchmark values | Comparing, %|
 |---|---|---|---|
-| `some tool` | nil | 0 | 0 |
+| `some tool` | nil | - | - |
 
 ### C++
 | Tool | Description | Benchmark values | Comparing, %|
 |---|---|---|---|
-| `some tool` | null | 0 | 0 |
+| `some tool` | null | - | - |
 
 
 ## HTTP adapters
@@ -40,33 +40,33 @@ Default command for verification:
 ### Python
 | Tool | Description | Benchmark values | Comparing, %|
 |---|---|---|---|
-| `requests + threads` | 8 threads | 0 | 0 |
-| `aiohttp` | None | 0 | 0 |
+| `requests + threads` | 8 threads | - | - |
+| `aiohttp` | None | - | - |
 
 ### Go
 | Tool | Description | Benchmark values | Comparing, %|
 |---|---|---|---|
-| `some tool` | null | 0 | 0 |
+| `some tool` | null | - | - |
 
 ### C++
 | Tool | Description | Benchmark values | Comparing, %|
 |---|---|---|---|
-| `some tool` | null | 0 | 0 |
+| `some tool` | null | - | - |
 
 ## DB adapters
 
 ### Python
 | Tool | Description | Benchmark values | Comparing, %|
 |---|---|---|---|
-| `psycopg` | 8 workers in WSGI | 0 | 0 |
-| `asyncpg` | None | 0 | 0 |
+| `psycopg` | 8 workers in WSGI | - | - |
+| `asyncpg` | None | - | - |
 
 ### Golang
 | Tool | Description | Benchmark values | Comparing, %|
 |---|---|---|---|
-| `some tool` | null | 0 | 0 |
+| `some tool` | null | - | - |
 
 ### C++
 | Tool | Description | Benchmark values | Comparing, %|
 |---|---|---|---|
-| `some tool` | null | 0 | 0 |
+| `some tool` | null | - | - |

@@ -27,21 +27,30 @@ Default command for verification:
 ### Golang
 | Tool | Description | Benchmark values | Comparing, %|
 |---|---|---|---|
-| `some tool` | nil | - | - |
+| `net/http` | nil | - | - |
+| `fasthttp` | nil | - | - |
+| `gin` | None | - | - |
+| `echo` | None | - | - |
+| `fiber` | None | - | - |
 
 ### C++
 | Tool | Description | Benchmark values | Comparing, %|
 |---|---|---|---|
 | `some tool` | null | - | - |
 
+### Conclusion
+
+
 
 ## HTTP adapters
 
+In this section benchmark consists of 10000 requests to 1-thread aiohttp server on local machine.
+
 ### Python
-| Tool | Description | Benchmark values | Comparing, %|
+| Tool | Description | Benchmark values, sec | Comparing, %|
 |---|---|---|---|
-| `requests + threads` | 8 threads | - | - |
-| `aiohttp` | None | - | - |
+| `requests + threads` | 8 threads in ThreadPoolExecutor | 2.35 | + 1305% |
+| `aiohttp` | 1 asynchronous thread | 0.18  | 0 % |
 
 ### Go
 | Tool | Description | Benchmark values | Comparing, %|
@@ -56,10 +65,10 @@ Default command for verification:
 ## DB adapters
 
 ### Python
-| Tool | Description | Benchmark values | Comparing, %|
+| Tool | Description | Benchmark values, sec | Comparing, %|
 |---|---|---|---|
-| `psycopg` | 8 workers in WSGI | - | - |
-| `asyncpg` | None | - | - |
+| `psycopg` | 8 workers in ThreadPool | 2.25 | 0 |
+| `asyncpg` | 1 asynchronous thread | 18.93 | + 841% |
 
 ### Golang
 | Tool | Description | Benchmark values | Comparing, %|

@@ -13,5 +13,6 @@ async def test_root(request) -> Response:
 
 app = web.Application()
 app.add_routes(routes)
-#web.run_app(app)
-# gunicorn src.web.python.aiohttp.test_aiohttp:app --bind localhost:8080 --worker-class aiohttp.GunicornWebWorker --workers=8
+# choose one of them
+# web.run_app(app)  # 1 thread
+# gunicorn src.web.python.test_aiohttp:app --bind localhost:8000 --worker-class aiohttp.GunicornWebWorker --workers=8  # 8 process

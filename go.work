@@ -1,0 +1,10 @@
+go 1.20
+
+use (
+	./src/web/go/aero
+	./src/web/go/echo
+	./src/web/go/fast_http
+	./src/web/go/fiber
+	./src/web/go/gin
+	./src/web/go/net_http
+)

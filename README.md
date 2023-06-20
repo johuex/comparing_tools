@@ -18,20 +18,23 @@ Default command for verification:
 | `aiohttp + gunicorn` | 1 worker (process) | 23037 | + 1172% |
 | `aiohttp + gunicorn` | 8 workers (processes) | 94071 | + 4789% |
 | `FastAPI + uvicorn` | 1 worker (process) | 1964 | 0 |
-| `FastAPI + uvicorn` | 8 workers (processes) | 9518 | + 484 % |
+| `FastAPI + uvicorn` | 8 workers (processes) | 9518 | + 484% |
 | `starlette + uvicorn` | 1 worker (process) | 3814 | + 194% |
 | `starlette + uvicorn` | 8 worker (processes) | 15080 | + 804% |
 
 
 
 ### Golang
-| Tool | Description | Benchmark values | Comparing, %|
+For default use all 16 threads
+| Tool | Description | Benchmark values, req/sec | Comparing, %|
 |---|---|---|---|
-| `net/http` | nil | - | - |
-| `fasthttp` | nil | - | - |
-| `gin` | None | - | - |
-| `echo` | None | - | - |
-| `fiber` | None | - | - |
+| `net/http` | - | 285423 | + 774% |
+| `fasthttp` | - | 414538 | + 1124% |
+| `gin` | ReleaseMode + Logs + JSON Answer | 65424 | + 177% |
+| `echo` | with Logger middleware | 36848 | 0% |
+| `echo` | without Logger middleware | 326130 | + 885% |
+| `fiber` | - | 508505 | + 1380% |
+| `aero` | - | 342943 | + 930% |
 
 ### C++
 | Tool | Description | Benchmark values | Comparing, %|

@@ -1,6 +1,7 @@
 go 1.20
 
 use (
+	./src/map_reduce/go
 	./src/web/go/aero
 	./src/web/go/echo
 	./src/web/go/fast_http

@@ -1,5 +1,17 @@
 # Comparing different tools
 
+## MapReduce
+
+### Task
+Calculate with MapReduce pattern: how many times has the word `aardvark`
+appeared in literature since 1500 in the Google Books Ngram Dataset.
+
+| Language | Description | Duration, sec |
+|---|---|---|
+| `python` | asyncio + ProcessPoolWorker (16 processes) | 22 |
+| `go` | 16 gorutines | 5 |
+
+
 ## Web API server & skeleton
 
 All Web API servers & skeletons are tested by [WRK](https://github.com/wg/wrk) benchmark tool.
@@ -39,10 +51,11 @@ For default use all 16 threads
 ### C++
 | Tool | Description | Benchmark values | Comparing, %|
 |---|---|---|---|
-| `some tool` | null | - | - |
-
-### Conclusion
-
+| `Boost Beast`| None | - | - |
+| `drogon`| None | - | - |
+| `POCO`| None | - | - |
+| `cpprestsdk`| None | - | - |
+| `self-made tcp server`| None | - | - | (https://osasazamegbe.medium.com/showing-building-an-http-server-from-scratch-in-c-2da7c0db6cb7)
 
 
 ## HTTP adapters
@@ -55,15 +68,6 @@ In this section benchmark consists of 10000 requests to 1-thread aiohttp server 
 | `requests + threads` | 8 threads in ThreadPoolExecutor | 2.35 | + 1305% |
 | `aiohttp` | 1 asynchronous thread | 0.18  | 0 % |
 
-### Go
-| Tool | Description | Benchmark values | Comparing, %|
-|---|---|---|---|
-| `some tool` | null | - | - |
-
-### C++
-| Tool | Description | Benchmark values | Comparing, %|
-|---|---|---|---|
-| `some tool` | null | - | - |
 
 ## DB adapters
 
@@ -72,13 +76,3 @@ In this section benchmark consists of 10000 requests to 1-thread aiohttp server 
 |---|---|---|---|
 | `psycopg` | 8 workers in ThreadPool | 2.25 | 0 |
 | `asyncpg` | 1 asynchronous thread | 18.93 | + 841% |
-
-### Golang
-| Tool | Description | Benchmark values | Comparing, %|
-|---|---|---|---|
-| `some tool` | null | - | - |
-
-### C++
-| Tool | Description | Benchmark values | Comparing, %|
-|---|---|---|---|
-| `some tool` | null | - | - |
